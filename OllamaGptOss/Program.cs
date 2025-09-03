@@ -1,47 +1,24 @@
-﻿using System.Text;
-using Microsoft.Extensions.AI;
-using OllamaSharp;
+﻿using OllamaGptOss.Config;
+using OllamaGptOss.Services;
+using OllamaGptOss.UI;
 
-const string ENDPOINT = "http://localhost:11434/";
-const string MODELO = "gpt-oss:20b";
-const int LIMITE_HISTORICO = 40;
-
-IChatClient chatClient = new OllamaApiClient(new Uri(ENDPOINT), MODELO);
-List<ChatMessage> historico = new();
-
-Console.WriteLine($"Chat {MODELO} — digite 'sair' para encerrar.\n");
-
-while (true)
+public static class Program
 {
-    Console.Write("Você: ");
-    var entrada = Console.ReadLine();
-
-    if (entrada is null) break;
-    if (entrada.Trim().ToLower() == "sair") break;
-    if (string.IsNullOrWhiteSpace(entrada)) continue;
-
-    historico.Add(new ChatMessage(ChatRole.User, entrada));
-    if (historico.Count > LIMITE_HISTORICO)
-        historico.RemoveRange(0, historico.Count - LIMITE_HISTORICO);
-    Console.Write("Assistente: ");
-    var respostaSb = new StringBuilder();
-
-    try
+    public static async Task Main()
     {
-        await foreach (var update in chatClient.GetStreamingResponseAsync(historico))
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+        Console.WriteLine($"Chat {AppSettings.Modelo} — conectado a {AppSettings.Endpoint}");
+        Console.CancelKeyPress += (_, e) =>
         {
-            if (!string.IsNullOrEmpty(update.Text))
-            {
-                Console.Write(update.Text);
-                respostaSb.Append(update.Text);
-            }
-        }
-    }
-    catch (Exception ex)
-    {
-        Console.Write($"\n[erro] {ex.Message}");
-    }
+            e.Cancel = true;
+        };
 
-    historico.Add(new ChatMessage(ChatRole.Assistant, respostaSb.ToString()));
-    Console.WriteLine("\n");
+        var history = new HistoryService(AppSettings.LimiteHistorico);
+        var chat = new ChatService(AppSettings.GetEndpointUri(), AppSettings.Modelo);
+        var console = new ConsoleChat(history, chat);
+
+        using var cts = new CancellationTokenSource();
+        await console.RunAsync(cts.Token);
+    }
 }

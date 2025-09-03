@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OllamaGptOss")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d84dfe312176f2c6c323ed53bd72c797e754428d")]
 [assembly: System.Reflection.AssemblyProductAttribute("OllamaGptOss")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OllamaGptOss")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

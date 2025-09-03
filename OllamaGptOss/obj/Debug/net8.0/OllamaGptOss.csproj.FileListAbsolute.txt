@@ -21,3 +21,4 @@ C:\Users\Paslauski\RiderProjects\OllamaGptOss\OllamaGptOss\obj\Debug\net8.0\refi
 C:\Users\Paslauski\RiderProjects\OllamaGptOss\OllamaGptOss\obj\Debug\net8.0\OllamaGptOss.pdb
 C:\Users\Paslauski\RiderProjects\OllamaGptOss\OllamaGptOss\obj\Debug\net8.0\OllamaGptOss.genruntimeconfig.cache
 C:\Users\Paslauski\RiderProjects\OllamaGptOss\OllamaGptOss\obj\Debug\net8.0\ref\OllamaGptOss.dll
+C:\Users\Paslauski\RiderProjects\OllamaGptOss\OllamaGptOss\obj\Debug\net8.0\OllamaGptOss.sourcelink.json
