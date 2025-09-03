@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "r8fAQ5cvoWU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Paslauski\\RiderProjects\\OllamaGptOss\\OllamaGptOss\\OllamaGptOss.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Paslauski\\.nuget\\packages\\microsoft.extensions.ai\\9.8.0\\microsoft.extensions.ai.9.8.0.nupkg.sha512",
+    "C:\\Users\\Paslauski\\.nuget\\packages\\microsoft.extensions.ai.abstractions\\9.8.0\\microsoft.extensions.ai.abstractions.9.8.0.nupkg.sha512",
+    "C:\\Users\\Paslauski\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Paslauski\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Paslauski\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.3\\microsoft.extensions.logging.abstractions.8.0.3.nupkg.sha512",
+    "C:\\Users\\Paslauski\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\Paslauski\\.nuget\\packages\\ollamasharp\\5.3.6\\ollamasharp.5.3.6.nupkg.sha512"
+  ],
+  "logs": []
+}
